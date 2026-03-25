@@ -3,15 +3,23 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": " concurrently \"next dev -p 5000\" \"tcm -w app\"",
     "build": "next build",
     "start": "next start",
     "lint": "eslint"
   },
   "dependencies": {
+    "@aws-sdk/client-s3": "^3.1016.0",
+    "@aws-sdk/s3-request-presigner": "^3.1016.0",
+    "@supabase/ssr": "^0.9.0",
+    "@supabase/supabase-js": "^2.100.0",
+    "concurrently": "^9.2.1",
+    "jszip": "^3.10.1",
     "next": "16.2.0",
     "react": "19.2.4",
-    "react-dom": "19.2.4"
+    "react-dom": "19.2.4",
+    "tcm": "^1.0.15",
+    "unzipper": "^0.12.3"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
