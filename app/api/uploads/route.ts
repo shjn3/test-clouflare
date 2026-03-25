@@ -6,7 +6,7 @@ import { getSlug } from "@/utils";
 import { PostgrestError } from "@supabase/supabase-js";
 import { NextRequest, NextResponse } from "next/server";
 import { DEV_TABLE_NAMES } from "../const";
-import { FetchUserProfile } from "../user/route";
+import { FetchUserProfile } from "../user/fetchProfile";
 
 export async function POST(req: NextRequest) {
     const formData = await req.formData()

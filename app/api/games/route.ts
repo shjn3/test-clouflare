@@ -4,7 +4,7 @@ import { getSlug } from "@/utils";
 import { PostgrestError } from "@supabase/supabase-js";
 import { NextResponse } from "next/server";
 import { DEV_TABLE_NAMES } from "../const";
-import { FetchUserProfile } from "../user/route";
+import { FetchUserProfile } from "../user/fetchProfile";
 
 export async function POST(req: Request) {
     const input: GamiGame = await req.json()

@@ -14,7 +14,7 @@ const ROLE_ROUTES: Record<UserRole, string> = {
     admin: "/admin",
     developer: "/developer",
 };
-export async function middleware(request: NextRequest) {
+export async function proxy(request: NextRequest) {
     const { pathname } = request.nextUrl;
     let supabaseResponse = NextResponse.next({ request });
 

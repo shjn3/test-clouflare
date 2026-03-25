@@ -9,10 +9,10 @@ import { DEV_TABLE_NAMES } from "../const";
 
 export async function FetchUserProfile() {
     const supabase = await createDevServerSupabaseClient();
-    const { data, error }:{
-        data:SafeDev|null,
-        error:PostgrestError|null
-    }= await supabase
+    const { data, error }: {
+        data: SafeDev | null,
+        error: PostgrestError | null
+    } = await supabase
         .from(DEV_TABLE_NAMES.profiles)
         .select().single();
 
